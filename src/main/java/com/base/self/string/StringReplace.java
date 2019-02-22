@@ -1,9 +1,9 @@
-package com.base.self.replace;
+package com.base.self.string;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TestReplace {
+public class StringReplace {
 	public static void main(String[] args) {
 		System.err.println("1234567890".replaceAll("(\\d{3})\\d{4}(\\d{4})", "$1****$2"));
 		
