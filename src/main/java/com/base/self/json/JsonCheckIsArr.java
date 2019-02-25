@@ -4,7 +4,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.oracle.javafx.jmx.json.JSONException;
-import utils.JSONUtils;
 
 public class JsonCheckIsArr {
 	public static void main(String[] args) throws JSONException {

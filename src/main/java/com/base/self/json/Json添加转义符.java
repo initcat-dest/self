@@ -2,7 +2,6 @@ package com.base.self.json;
 
 import com.base.self.model.BaseTestModel;
 import com.google.gson.JsonObject;
-import utils.JSONUtils;
 
 import java.util.ArrayList;
 import java.util.List;
