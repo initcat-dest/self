@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -21,16 +22,14 @@ import java.util.List;
  */
 public class ReadExcelFileUtil {
 
-    public static final String EXCEL_TYPE_XLS = "xls";
-    public static final String EXCEL_TYPE_XLSX = "xlsx";
+    private static final String EXCEL_TYPE_XLS = "xls";
+    private static final String EXCEL_TYPE_XLSX = "xlsx";
 
     public static void main(String[] args) {
-        String path = "d:/software/企发支付-员工信息表.xlsx";
+        String path = "/Users/libo/Desktop/test1.xls";
         List<List<String>> lists = readExcel(path);
-        for (List<String> list : lists) {
-            for (String strs : list) {
-                System.out.println(strs);
-            }
+        if (lists != null) {
+            lists.stream().flatMap(Collection::stream).forEachOrdered(System.out::println);
         }
     }
 
@@ -62,7 +61,7 @@ public class ReadExcelFileUtil {
             Sheet sheet = wb.getSheetAt(0);
             // 第一行为标题
             for (Row row : sheet) {
-                ArrayList<String> list = new ArrayList<>();
+                List<String> list = new ArrayList<>();
                 for (Cell cell : row) {
                     // 根据不同类型转化成字符串
                     cell.setCellType(Cell.CELL_TYPE_STRING);
@@ -79,10 +78,10 @@ public class ReadExcelFileUtil {
         return lists;
     }
 
-    private static void closeIO(InputStream is) {
+    private static void closeIO(InputStream inputStream) {
         try {
-            if (is != null) {
-                is.close();
+            if (inputStream != null) {
+                inputStream.close();
             }
         } catch (IOException e) {
             System.out.println("关闭流错误");
