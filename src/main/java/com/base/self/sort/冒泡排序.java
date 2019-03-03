@@ -20,5 +20,6 @@ public class 冒泡排序 {
 		for(int i : a){
 			System.out.print(i+",");
 		}
+
 	}
 }
