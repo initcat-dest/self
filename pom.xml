@@ -84,7 +84,17 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.16</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.6.RELEASE</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
