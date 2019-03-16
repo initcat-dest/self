@@ -12,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
  * @date 2019/3/16
  */
 public class RestTemplateTest {
-
 	public static void main(String[] args) {
 		RestTemplate test = new RestTemplate();
 		ResponseEntity<String> forEntity = test.getForEntity("http://baidu.com", String.class);
