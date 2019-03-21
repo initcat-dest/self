@@ -1,9 +1,7 @@
 package com.base.self.test;
 
-import org.apache.commons.lang3.time.DateUtils;
-
-import java.text.ParseException;
-import java.util.Date;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Test {
 	public static void func(int a) {
@@ -67,14 +65,31 @@ public class Test {
 //		System.out.println(money);
 //	}
 
-	public static void main(String[] args) throws ParseException {
-		Date date = DateUtils.parseDate("2019-11-25", "yyyy-MM-dd");
-
-		System.out.println("date.getMonth():" + date.getMonth());
-		System.out.println("date.getDate():"+date.getDate());
-		System.err.println(date.getMonth() + "" + date.getDate());
+	public static void main(String[] args) throws NoSuchAlgorithmException {
+		String userid = "tset";
+		String password = "123456";
+		getTruePassword(userid, password);
+		return;
 	}
 
+	/**
+	 * 获取 转化后的密码
+	 */
+	public static String getTruePassword(String userid, String password) throws NoSuchAlgorithmException {
+		MessageDigest sha1 = MessageDigest.getInstance("SHA1");
+		String passwordTemp = userid + "/n" + password;
+		byte[] bytes = sha1.digest(passwordTemp.getBytes());
+		// 转化后的passwordTure
+		String passwordTure = "";
+		for (byte b : bytes) {
+			String temp = Integer.toHexString(b & 0xff);
+			if (temp.length() == 1) {
+				temp = "0" + temp;
+			}
+			passwordTure += temp;
+		}
+		return passwordTure;
+	}
 
 
 	public String method(String[] strs) {
