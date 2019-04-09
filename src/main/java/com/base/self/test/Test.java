@@ -1,5 +1,8 @@
 package com.base.self.test;
 
+
+import org.springframework.beans.BeanUtils;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -66,10 +69,17 @@ public class Test {
 //	}
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
-		String userid = "tset";
-		String password = "123456";
-		getTruePassword(userid, password);
-		return;
+		BeanUtilsTestDemo source = new BeanUtilsTestDemo();
+		source.setName("hehe");
+
+		BeanUtilsTestDemo target = new BeanUtilsTestDemo();
+		target.setId(111);
+
+		BeanUtils.copyProperties(source, target);
+
+		System.out.println(source.toString());
+		System.out.println(target.toString());
+
 	}
 
 	/**

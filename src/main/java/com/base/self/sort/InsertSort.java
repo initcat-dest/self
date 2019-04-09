@@ -1,6 +1,10 @@
 package com.base.self.sort;
 
-public class 插入排序 {
+/**
+ * 插入排序
+ * @author dest
+ */
+public class InsertSort {
 
     public static void chaRu(int a[]) {
         int i, j, temp;

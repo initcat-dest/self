@@ -3,7 +3,11 @@ package com.base.self.sort;
 import java.io.File;
 import java.util.Scanner;
 
-public class 冒泡排序 {
+/**
+ * 冒泡排序
+ * @author dest
+ */
+public class BubblingSort {
 	public static void maoPao(int[] array) {
 		int i, j, temp;
 		int len = array.length;
