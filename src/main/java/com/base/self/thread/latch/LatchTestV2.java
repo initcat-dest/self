@@ -1,4 +1,4 @@
-package com.base.self.latch;
+package com.base.self.thread.latch;
 
 import java.util.concurrent.CountDownLatch;
 

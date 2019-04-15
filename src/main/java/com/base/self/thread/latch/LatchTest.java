@@ -1,4 +1,4 @@
-package com.base.self.latch;
+package com.base.self.thread.latch;
 
 import java.text.NumberFormat;
 import java.util.concurrent.ConcurrentHashMap;
