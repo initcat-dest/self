@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  *
  * @author libo
  * @package com.base.self.list
- * @company xmiles
+ * @company initcat
  * @date 2019/3/28
  */
 public class OffsetTest {

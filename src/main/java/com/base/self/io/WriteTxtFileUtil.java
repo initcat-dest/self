@@ -7,7 +7,7 @@ import java.io.*;
  *
  * @author libo
  * @package com.base.self.io
- * @company xmiles
+ * @company initcat
  * @date 2019/2/22
  */
 public class WriteTxtFileUtil {

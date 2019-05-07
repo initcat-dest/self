@@ -8,7 +8,7 @@ import lombok.Data;
  *
  * @author libo
  * @package com.base.self.io
- * @company xmiles
+ * @company initcat
  * @date 2019/2/25
  */
 @Data

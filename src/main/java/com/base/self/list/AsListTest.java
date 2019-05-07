@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author libo
  * @package com.base.self.list
- * @company xmiles
+ * @company initcat
  * @date 2019/3/18
  */
 public class AsListTest {

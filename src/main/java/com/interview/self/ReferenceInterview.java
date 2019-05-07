@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author libo
  * @package com.interview.self
- * @company xmiles
+ * @company initcat
  * @date 2019/2/23
  */
 public class ReferenceInterview {

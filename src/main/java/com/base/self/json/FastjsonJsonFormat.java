@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
  *
  * @author libo
  * @package com.base.self.json
- * @company xmiles
+ * @company initcat
  * @date 2019/2/22
  */
 public class FastjsonJsonFormat {

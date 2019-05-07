@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
  *
  * @author libo
  * @package com.base.self.http
- * @company xmiles
+ * @company initcat
  * @date 2019/3/16
  */
 public class RestTemplateTest {
