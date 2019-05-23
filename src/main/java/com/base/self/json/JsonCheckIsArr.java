@@ -3,10 +3,9 @@ package com.base.self.json;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.oracle.javafx.jmx.json.JSONException;
 
 public class JsonCheckIsArr {
-	public static void main(String[] args) throws JSONException {
+	public static void main(String[] args) {
 //		String jsonStr = "{\"scm\":[{\"key1\":\"vlaue1\",\"key2\":\"vlaue2\"},{\"key11\":\"vlaue11\",\"key22\":\"vlaue22\"}]}";
 //		String jsonStr = "[{\"key1\":\"vlaue1\",\"key2\":\"vlaue2\"},{\"key11\":\"vlaue11\",\"key22\":\"vlaue22\"}]";
 //		String jsonStr = "[{\"expression\": \"1\", \"request\": \"invest_intent\"},{\"expression\": \"0\", \"request\": \"test\"}]";

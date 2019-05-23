@@ -5,7 +5,7 @@ package com.base.self.test;
  *
  * @author libo
  * @package com.base.self.test
- * @company xmiles
+ * @company initcat
  * @date 2019/3/22
  */
 public class BeanUtilsTestDemo {

@@ -1,7 +1,5 @@
 package com.base.self.utils;
 
-import com.base.common.log.LogService;
-
 import java.math.BigDecimal;
 
 /**
@@ -86,7 +84,7 @@ public class UtilNumber {
 		} else if (obj instanceof BigDecimal) {
 			return (BigDecimal) obj;
 		} else {
-			LogService.error("不能转换:" + obj);
+			System.out.println(("不能转换:" + obj));
 			throw new RuntimeException("不能转换");
 		}
 	}

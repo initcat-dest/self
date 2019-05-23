@@ -6,7 +6,7 @@ package com.base.self.thread;
  *
  * @author libo
  * @package com.base.self.thread
- * @company xmiles
+ * @company initcat
  * @date 2019/3/5
  */
 public class BadSuspend {

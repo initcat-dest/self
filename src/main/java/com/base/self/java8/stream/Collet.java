@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.*;
  *
  * @author libo
  * @package com.base.self.java8.stream
- * @company xmiles
+ * @company initcat
  * @date 2019/4/15
  */
 public class Collet {

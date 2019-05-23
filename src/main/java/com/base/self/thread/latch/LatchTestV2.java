@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
  *
  * @author libo
  * @package com.base.self.latch
- * @company xmiles
+ * @company initcat
  * @date 2019/4/7
  */
 public class LatchTestV2 {

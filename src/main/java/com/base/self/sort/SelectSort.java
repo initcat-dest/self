@@ -8,7 +8,7 @@ package com.base.self.sort;
  *
  * @author libo
  * @package com.base.self.sort
- * @company xmiles
+ * @company initcat
  * @date 2019/4/9
  */
 public class SelectSort {

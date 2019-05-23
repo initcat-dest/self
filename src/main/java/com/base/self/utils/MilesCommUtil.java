@@ -1,10 +1,6 @@
 package com.base.self.utils;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
-
-import com.base.common.util.Base64;
 
 public class MilesCommUtil {
 	
@@ -122,9 +118,11 @@ public class MilesCommUtil {
         random.nextBytes(bytes);
 
         try {
-            return Base64.encodeBytes(bytes).substring(0, strLen);
+//            return Base64.encodeBytes(bytes).substring(0, strLen);
         } catch (Exception var4) {
             return "";
         }
+        // TODO
+		return "";
     }
 }
