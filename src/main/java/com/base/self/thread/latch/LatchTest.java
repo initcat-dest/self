@@ -14,7 +14,9 @@ import java.util.concurrent.Executors;
  */
 public class LatchTest {
     static int count = 0;
-    // 总访问量是clientNum，并发量是threadNum
+    /**
+     * 总访问量是clientNum，并发量是threadNum
+     */
     int threadNum = 4;
     int clientNum = 12;
 
@@ -39,23 +41,20 @@ public class LatchTest {
         final CountDownLatch doneSignal = new CountDownLatch(clientNum);
 
         for (int i = 0; i < clientNum; i++) {
-            Runnable run = new Runnable() {
-                @Override
-                public void run() {
-                    int index = getIndex();
-                    long systemCurrentTimeMillis = System.currentTimeMillis();
-                    try {
+            Runnable run = () -> {
+                int index = getIndex();
+                long systemCurrentTimeMillis = System.currentTimeMillis();
+                try {
 //                        String sendGet = HttpClientUtil.sendGet("http://localhost:8080/Dima3773Web/Simulate", "");
 //                        System.out.println(System.currentTimeMillis() + sendGet);
-                        System.out.println(System.currentTimeMillis());
-                         Thread.sleep(1000);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                    records.put(index, new ThreadRecord(systemCurrentTimeMillis, System.currentTimeMillis()));
-                    doneSignal.countDown();// 每调用一次countDown()方法，计数器减1
+                    System.out.println(System.currentTimeMillis());
+                     Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+
+                records.put(index, new ThreadRecord(systemCurrentTimeMillis, System.currentTimeMillis()));
+                doneSignal.countDown();// 每调用一次countDown()方法，计数器减1
             };
             exec.execute(run);
         }
@@ -68,9 +67,6 @@ public class LatchTest {
         }
         exec.shutdown();
 
-        /**
-         * 获取每个线程的开始时间和结束时间
-         */
         for (int i : records.keySet()) {
             ThreadRecord r = records.get(i);
             sumexecTime += ((double) (r.endTime - r.startTime)) / 1000;
