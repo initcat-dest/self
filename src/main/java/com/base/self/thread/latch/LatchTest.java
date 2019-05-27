@@ -13,31 +13,29 @@ import java.util.concurrent.Executors;
  * @author Administrator
  */
 public class LatchTest {
-    static int count = 0;
+    private static int count = 0;
     /**
      * 并发量
      */
-    int threadNum = 4;
+    private int threadNum = 4;
     /**
      * 总访问量
      */
-    int clientNum = 12;
+    private int clientNum = 12;
 
-    float avgExecTime = 0;
-    float sumexecTime = 0;
-    long firstExecTime = Long.MAX_VALUE;
-    long lastDoneTime = Long.MIN_VALUE;
-    float totalExecTime = 0;
+    private float avgExecTime = 0;
+    private float sumexecTime = 0;
+    private long firstExecTime = Long.MAX_VALUE;
+    private long lastDoneTime = Long.MIN_VALUE;
+    private float totalExecTime = 0;
 
     public static void main(String[] args) {
         new LatchTest().run();
         System.out.println("finished!");
     }
 
-    public void run() {
-
-        final ConcurrentHashMap<Integer, ThreadRecord> records = new ConcurrentHashMap<Integer, ThreadRecord>();
-
+    private void run() {
+        final ConcurrentHashMap<Integer, ThreadRecord> records = new ConcurrentHashMap<>();
         // 建立ExecutorService线程池，threadNum个线程可以同时访问
         ExecutorService exec = Executors.newFixedThreadPool(threadNum);
         // 模拟clientNum个客户端访问
@@ -48,6 +46,7 @@ public class LatchTest {
                 int index = getIndex();
                 long systemCurrentTimeMillis = System.currentTimeMillis();
                 try {
+                    // do something
 //                        String sendGet = HttpClientUtil.sendGet("http://localhost:8080/Dima3773Web/Simulate", "");
 //                        System.out.println(System.currentTimeMillis() + sendGet);
                     System.out.println(System.currentTimeMillis());
