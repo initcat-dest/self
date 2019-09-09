@@ -1,7 +1,10 @@
 package com.base.self.sort;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 /**
  * 插入排序
+ * 时间复杂度：O(n^2)
  * 从第一个元素开始，该元素可以认为已经被排序
  * 取出下一个元素，在已经排序的元素序列中从后向前扫描
  * 如果该元素（已排序）大于新元素，将该元素移到下一位置
@@ -13,7 +16,7 @@ package com.base.self.sort;
  */
 public class InsertSort {
 
-    public static void chaRu(int a[]) {
+    private static void insertSort(int[] a) {
         int i, j, temp;
         int len = a.length;
         for (i = 1; i < len; i++) {
@@ -29,10 +32,8 @@ public class InsertSort {
 
     public static void main(String[] args) {
         int[] a = {3, 1, 2, 4, 6, 5};
-        chaRu(a);
-        for (int i : a) {
-            System.out.print(i + ",");
-        }
+        insertSort(a);
+        System.out.println(ArrayUtils.toString(a));
     }
 
 }
