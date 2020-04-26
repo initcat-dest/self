@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author libo
  * @package com.base.self.times
- * @company xmiles
+ * @company initcat
  * @date 2019/6/20
  */
 public class Times {

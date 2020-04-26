@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @author libo
  * @package com.base.self.maps
- * @company xmiles
+ * @company initcat
  * @date 2019/4/23
  */
 public class HashMapTest {

@@ -5,7 +5,7 @@ package com.base.self.booleanTest;
  *
  * @author libo
  * @package com.base.self.booleanTest
- * @company xmiles
+ * @company initcat
  * @date 2019/5/21
  */
 public class BooleanTest {

@@ -18,10 +18,29 @@ public class Probability {
 
     public static void main(String[] args) {
         Probability service = new Probability();
-        int[] arr = {100, 400, 200, 300};
-        service.getResult(arr);
+//        int[] arr = {4, 1, 3, 2};
+        int[] arr = {1, 2, 3, 4};
 
-        service.getPrize();
+        int i1 = 0,i2 = 0,i3 = 0,i4 = 0;
+        for (int i = 0; i < 1000000; i++) {
+
+            int result = service.getResult(arr);
+            if (result == 1) {
+                i1++;
+            }
+            if (result == 2) {
+                i2++;
+            }
+            if (result == 3) {
+                i3++;
+            }
+            if (result == 4) {
+                i4++;
+            }
+        }
+        System.out.println("i1:" + i1 +" i2:" + i2 +" i3:" + i3 +" i4:" + i4);
+
+//        service.getPrize();
 
     }
 
@@ -41,7 +60,7 @@ public class Probability {
             int random = (int) (Math.random() * leng);
             if (random < arr[i]) {
                 //如果在当前的概率范围内,得到的就是当前概率
-                return i;
+                return arr[i];
             } else {
                 //否则减去当前的概率范围,进入下一轮循环
                 leng -= arr[i];

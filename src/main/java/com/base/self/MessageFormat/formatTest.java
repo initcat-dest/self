@@ -7,7 +7,7 @@ import java.text.MessageFormat;
  *
  * @author libo
  * @package com.base.self.MessageFormat
- * @company xmiles
+ * @company initcat
  * @date 2019/4/19
  */
 public class formatTest {

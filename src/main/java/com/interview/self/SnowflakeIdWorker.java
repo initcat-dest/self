@@ -1,15 +1,6 @@
 package com.interview.self;
 
 /**
- * class description
- *
- * @author libo
- * @package com.interview.self
- * @company xmiles
- * @date 2019/8/27
- */
-
-/**
  * Description: 雪花算法<br>
  * 结构如下(每部分用-分开):<br>
  * 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000 <br>
@@ -23,8 +14,10 @@ package com.interview.self;
  * SnowFlake的优点是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，
  * 经测试，SnowFlake每秒能够产生26万ID左右。
  *
- * @author Ale
- * @date 2018/7/18-下午5:11
+ * @author libo
+ * @package com.interview.self
+ * @company initcat
+ * @date 2019/8/27
  */
 public class SnowflakeIdWorker {
 

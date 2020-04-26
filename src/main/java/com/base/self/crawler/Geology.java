@@ -12,7 +12,7 @@ import java.net.URL;
  *
  * @author libo
  * @package com.base.self.crawler
- * @company xmiles
+ * @company initcat
  * @date 2019/5/23
  */
 public class Geology {

@@ -5,7 +5,7 @@ package com.base.self.digui;
  *
  * @author libo
  * @package com.base.self.digui
- * @company xmiles
+ * @company initcat
  * @date 2019/5/31
  */
 public class DiGui2 {

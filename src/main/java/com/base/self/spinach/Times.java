@@ -8,7 +8,7 @@ import java.util.Random;
  *
  * @author libo
  * @package com.base.self.spinach
- * @company xmiles
+ * @company initcat
  * @date 2019/9/14
  */
 public class Times {
