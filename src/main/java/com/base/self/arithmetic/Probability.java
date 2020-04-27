@@ -18,11 +18,11 @@ public class Probability {
 
     public static void main(String[] args) {
         Probability service = new Probability();
-//        int[] arr = {4, 1, 3, 2};
-        int[] arr = {1, 2, 3, 4};
+        int[] arr = {4, 1, 3, 2};
+//        int[] arr = {1, 2, 3, 4};
 
         int i1 = 0,i2 = 0,i3 = 0,i4 = 0;
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 100000; i++) {
 
             int result = service.getResult(arr);
             if (result == 1) {
@@ -53,17 +53,30 @@ public class Probability {
      * @return
      */
     private int getResult(int[] arr) {
-        int leng = Arrays.stream(arr).sum();
+//        int leng = Arrays.stream(arr).sum();
+//        //获取总数
+//        for (int i = 0; i < arr.length; i++) {
+//            //获取 0-总数 之间的一个随随机整数
+//            int random = (int) (Math.random() * leng);
+//            if (random < arr[i]) {
+//                //如果在当前的概率范围内,得到的就是当前概率
+//                return arr[i];
+//            } else {
+//                //否则减去当前的概率范围,进入下一轮循环
+//                leng -= arr[i];
+//            }
+//        }
+//        return 0;
+        // 精简写法
+        int count = Arrays.stream(arr).sum();
+        //获取 0-总数 之间的一个随随机整数
+        int offset = (int) (Math.random() * count);
         //获取总数
         for (int i = 0; i < arr.length; i++) {
-            //获取 0-总数 之间的一个随随机整数
-            int random = (int) (Math.random() * leng);
-            if (random < arr[i]) {
+            offset -= arr[i];
+            if (offset < 0) {
                 //如果在当前的概率范围内,得到的就是当前概率
                 return arr[i];
-            } else {
-                //否则减去当前的概率范围,进入下一轮循环
-                leng -= arr[i];
             }
         }
         return 0;
