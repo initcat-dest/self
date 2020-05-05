@@ -3,7 +3,7 @@ package com.base.self.thread;
 import java.util.concurrent.*;
 
 /**
- * class description 集中创建线程的方式
+ * class description 几种创建线程的方式
  *
  * @author libo
  * @package com.base.self.thread
