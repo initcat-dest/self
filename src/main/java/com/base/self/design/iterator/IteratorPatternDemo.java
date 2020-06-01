@@ -3,7 +3,7 @@ package com.base.self.design.iterator;
 import java.util.Iterator;
 
 /**
- * class description TODO
+ * class description 调用
  *
  * @author libo
  * @package com.base.self.design.iterator

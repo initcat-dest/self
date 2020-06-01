@@ -3,7 +3,7 @@ package com.base.self.design.iterator;
 import java.util.Iterator;
 
 /**
- * class description TODO
+ * class description 名称仓库
  *
  * @author libo
  * @package com.base.self.design.iterator
@@ -25,10 +25,7 @@ public class NameRepository {
         @Override
         public boolean hasNext() {
             System.out.println(" hasNext ....");
-            if (index < names.length) {
-                return true;
-            }
-            return false;
+            return index < names.length;
         }
 
         @Override

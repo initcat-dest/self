@@ -21,6 +21,7 @@ public class Client {
         // 但是我们在WeatherData中添加了一个模拟硬件发送气象数据的函数，Subject中并没有这个函数。
         // 所以使用了WeatherData来创建主题。
         WeatherData weatherData = new WeatherData();
+
         // 建立一个观察者（也就是布告板），把主题传给观察者，在观察者的构造函数中订阅主题。
         Observer ccDisplay = new CurrentConditionsDisplay(weatherData);
 

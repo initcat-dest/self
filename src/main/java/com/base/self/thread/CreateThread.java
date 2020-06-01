@@ -32,7 +32,7 @@ public class CreateThread {
 //        System.out.println("END");
         ExecutorService executorService = Executors.newFixedThreadPool(1);
         Future submit = executorService.submit(type3ImplementsCallable);
-        System.out.println(submit.get());
+//        System.out.println(submit.get());
         System.out.println("END");
         executorService.shutdown();
     }
