@@ -16,7 +16,7 @@ public class RedisTest {
 //		System.out.println(jedis.ping());
 //		jedis.close();
 		
-		Jedis jedis = RedisConstant.getJedis();
+		Jedis jedis = RedisConstant.getJedis(RedisConstant.localHost);
 //		Boolean bs= jedis.getbit("result", 100);
 //		System.out.println(bs);
 		Set<Tuple> test = jedis.zrangeWithScores("test", 0L, -1L);
@@ -35,7 +35,7 @@ public class RedisTest {
 	 */
 	@Test
 	public void test1() throws Exception {
-		Jedis jedis = RedisConstant.getJedis();
+		Jedis jedis = RedisConstant.getJedis(RedisConstant.localHost);
 		jedis.set("test", "1");
 		String string = jedis.get("test");
 		System.out.println(string);
@@ -44,7 +44,7 @@ public class RedisTest {
 	
 	@Test
 	public void byteTest() {
-		Jedis jedis = RedisConstant.getJedis();
+		Jedis jedis = RedisConstant.getJedis(RedisConstant.localHost);
 		String bs= jedis.get("result");
 		System.out.println(bs);
 		jedis.close();

@@ -50,7 +50,7 @@ public class SaleRunable implements Runnable {
 	
 	@Override
 	public void run() {
-		Jedis jedis = RedisConstant.getJedis();
+		Jedis jedis = RedisConstant.getJedis(RedisConstant.localHost);
 		// 商品的key， 秒杀有个数量
 		String value = jedis.get(productKey);
 		int num = Integer.valueOf(value);
@@ -70,7 +70,7 @@ public class SaleRunable implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		Jedis jedis = RedisConstant.getJedis();
+		Jedis jedis = RedisConstant.getJedis(RedisConstant.localHost);
 		jedis.set(productKey, "10");
 		jedis.close();
 
