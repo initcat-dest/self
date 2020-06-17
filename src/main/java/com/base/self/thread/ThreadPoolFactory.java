@@ -154,6 +154,16 @@ public class ThreadPoolFactory {
         return scheduledPoolExecutor;
     }
 
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        ScheduledFuture<?> schedule = com.base.common.util.ThreadPoolFactory.getScheduledPoolExecutorInstance().schedule(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }, 1L, TimeUnit.DAYS);
+        schedule.get();
+    }
+
     /**
      * 与上一个方法一样，但池子容量为1, 多余排队, 按优先级执行
      */
