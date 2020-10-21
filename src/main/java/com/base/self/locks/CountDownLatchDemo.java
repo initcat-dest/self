@@ -16,8 +16,8 @@ public class CountDownLatchDemo {
 
     public static void main(String[] args) {
         CountDownLatchDemo countDownLatchDemo = new CountDownLatchDemo();
-        countDownLatchDemo.simpleTest();
-//        countDownLatchDemo.parallelLimit();
+//        countDownLatchDemo.simpleTest();
+        countDownLatchDemo.parallelLimit();
     }
 
     public void parallelLimit() {

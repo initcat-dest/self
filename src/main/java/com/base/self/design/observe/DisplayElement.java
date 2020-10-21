@@ -11,7 +11,7 @@ package com.base.self.design.observe;
 public interface DisplayElement {
 
     /**
-     * 当布告板需要显示时，调用次方法。
+     * 当布告板需要显示时，调用此方法。
      */
     void display();
 
